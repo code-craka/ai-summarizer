@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { sentryVitePlugin } from '@sentry/vite-plugin';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { sentryVitePlugin } from '@sentry/vite-plugin'
 
 // Vite configuration
 export default defineConfig({
@@ -12,12 +12,12 @@ export default defineConfig({
       project: 'techsci-ai-summarizer', // Your Sentry project slug
       release: 'ai-summarizer@1.0.0', // Your project release version
       setCommits: {
-        auto: true, // Automatically associate commits with the release
+        auto: true // Automatically associate commits with the release
       },
-      telemetry: false, // Optional: Disable telemetry if desired
-    }),
+      telemetry: false // Optional: Disable telemetry if desired
+    })
   ],
   build: {
-    sourcemap: true, // Ensure source maps are enabled for Sentry
-  },
-});
+    sourcemap: true // Ensure source maps are enabled for Sentry
+  }
+})
